@@ -1,0 +1,10 @@
+<div class="col-md-6">
+  <h1>Names List</h1>
+  <form >
+    <div class="form-group">
+      <label for="name">Name</label>
+      <textarea type="text" name="name" class="form-control" rows="5" cols="10" [(ngModel)]="names" (change)="displayNames();" ></textarea>
+    </div>
+    <app-name [messages]="names"></app-name>
+  </form>
+</div>
