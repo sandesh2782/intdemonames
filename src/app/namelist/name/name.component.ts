@@ -14,9 +14,11 @@ export class NameComponent implements OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges) {
-      for (let propName in changes) {
-        let change = changes[propName];
-        this.displayNameList = change.currentValue ? change.currentValue.split('\n'): '';
+      for (const propName in changes) {
+        if (changes.hasOwnProperty(propName)) {
+          const change = changes[propName];
+          this.displayNameList = change.currentValue ? change.currentValue.split('\n') : '';
+        }
       }
     }
 }
