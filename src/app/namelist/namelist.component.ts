@@ -1,12 +1,11 @@
 // Importing required components
-import { Component, OnInit } from '@angular/core';
-
+import { Component } from '@angular/core';
 @Component({
   selector: 'app-namelist',
   templateUrl: './namelist.component.html',
   styleUrls: ['./namelist.component.css']
 })
-export class NamelistComponent implements OnInit {
+export class NamelistComponent {
 
   names: string; // used to store names from textarea input
   displayNameList: string[]; // used to display names in the form of list
@@ -20,7 +19,6 @@ export class NamelistComponent implements OnInit {
     const names: string = this.names;
     if (names) {
         const namesArray = names.split('\r\n');
-        const displayNameList = [];
         namesArray.forEach(name => {
             this.displayNameList.push(`${name}`);
         });
@@ -28,9 +26,4 @@ export class NamelistComponent implements OnInit {
         this.displayNameList = [];
     }
   }
-
-  ngOnInit() {
-    console.log(this.names);
-  }
-
 }

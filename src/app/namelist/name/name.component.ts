@@ -1,5 +1,4 @@
-import { Component, OnChanges, Input, SimpleChange, SimpleChanges } from '@angular/core';
-
+import { Component, OnChanges, Input, SimpleChanges } from '@angular/core';
 @Component({
   selector: 'app-name',
   templateUrl: './name.component.html',
